@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The cocktail db</title>
+    <!-- tailwind -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center text-5xl my-10 text-blue-700 font-bold">The cocktail db</h1>
+    </header>
+
+    <main>
+        <!-- search box -->
+        <section>
+            <div class="text-center">
+                <input id="search-box" type="text" placeholder="Search your cocktail"
+                    class="input w-full max-w-xs border border-emerald-700" />
+                <button onclick="searchBtn()" class="btn btn-accent">Search</button>
+            </div>
+        </section>
+
+        <!-- display data -->
+        <section>
+            <div id="cocktail-parent" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mx-4 my-6">
+                <!-- cocktails -->
+            </div>
+        </section>
+
+        <!-- modal for details -->
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+            <div class="modal-box relative">
+                <img id="img-details" alt="">
+                <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                <h3 id="drinks-name" class="text-lg font-bold"></h3>
+                <p id="drinks-tag-line" class="py-4"></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
